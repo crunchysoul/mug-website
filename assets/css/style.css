@@ -1,0 +1,16 @@
+/* General CSS rules for every viewport, including smartphones */
+
+body {
+  background: #000000;
+}
+
+@media (min-width: 768px) {
+  /* Rules for tablets and bigger viewports */
+  body {
+    background: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Rules for larger desktop screens only */
+}
