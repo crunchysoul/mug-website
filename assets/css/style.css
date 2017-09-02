@@ -1,31 +1,11 @@
+/* general: */
 body {
   margin: 0px;
   padding: 0px;
   width: 100%;
   color: #fff;
   background: #000;
-  font: bold 18px/1.5 PT Sans, sans-serif;
-}
-
-header {
-  max-width:768px;
-  width: auto;
-}
-
-.col-1-1 {
-  padding: 0;
-  border: red 2px solid;
-}
-
-.banner {
-  border: cyan 2px solid;
-  padding: 0;
-}
-
-
-#map {
-  max-width: 768px;
-  width: auto;
+  font: 18px/1.5 PT Sans, sans-serif;
 }
 
 h1 {
@@ -49,75 +29,59 @@ img {
   height: auto;
 }
 
-#a {
-  border: red 2px solid;
+header {
   padding: 0;
-  /* width: 100%; */
+  max-width:768px;
+  width: auto;
 }
 
-#b {
-  border: yellow 2px solid;
+.col-1-1 {
   padding: 0;
-  /* max-width: 768px; */
-  /* width: 100%; */
-}
-
-#c {
-  border: lime 2px solid;
-  /* max-width: 768px; */
-  /* width: 100%; */
-  padding: 0;
-}
-
-#d {
-  border: cyan 2px solid;
 }
 
 /* grid */
 .row {
-  display: flex;
+  display: -webkit-flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
 .google-map {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
   padding: 0;
   margin: 0;
-  /* padding-bottom: 100%; // This is the aspect ratio */
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .col-1-2 {
+  padding: 0;
   padding-left: 10px;
   padding-right: 10px;
-  /* margin: 10px; */
+  margin: 0px;
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  img {
-    width: 100%;
-    height: auto;
-  }
-
+/* responsive part: */
+@media all and (min-width: 768px) {
   .col-1-1 {
-    max-width: 768px;
-    padding: 0;
+    /* max-width: 768px; */
+    flex: 0 0 768px;
     width: 100%;
     height: auto;
   }
 
   .col-1-2 {
-    max-width:384px;
+    /* max-width:384px; */
+    flex: 0 0 364px;
     width: 50%;
+    height: auto;
   }
 
   .google-map iframe {
-    padding: 0;
-    max-width: 768px;
-    width: 100%;
-    height: 100%;
+    /* max-width: 768px; */
+    flex: 0 0 768px;
+    width: 768px;
+    height: 384px;
   }
 }
